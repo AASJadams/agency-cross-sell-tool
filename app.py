@@ -337,7 +337,11 @@ if file:
                     else:
                         highlight_rows.append(None)
 
-                table = Table(customer_table_data, repeatRows=1)
+                table = Table(
+                    customer_table_data,
+                    repeatRows=1,
+                    colWidths=[100, 120, 100, 100, 80, 80]  # You can tweak these values further
+                )
                 style = TableStyle([
                     ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#f39c12")),
                     ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
